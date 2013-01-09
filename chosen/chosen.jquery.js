@@ -504,7 +504,7 @@ Copyright (c) 2011 by Harvest
     };
 
     Chosen.prototype.close_field = function() {
-      $(document).unbind("click", this.click_test_action);
+      $(document).off("click touchstart", this.click_test_action);
       this.active_field = false;
       this.results_hide();
       this.container.removeClass("chzn-container-active");
